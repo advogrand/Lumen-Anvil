@@ -7,26 +7,28 @@ const navItems = [
   { href: '#contact', label: 'Контакт' },
 ];
 
+const media = (filename) => `${import.meta.env.BASE_URL}media/${filename}`;
+
 const forgeItems = [
   {
     number: '01',
     title: 'Дизайн боссов',
     text: 'Придумываем противников, которых легко считать в кадре: силуэт, материал, оружие, фазы и главное ощущение угрозы.',
-    image: '/media/forge-boss-design.png',
+    image: media('forge-boss-design.png'),
     alt: 'Концепт-лист босса с рогатым темным персонажем, вариантами силуэта, масками и материалами',
   },
   {
     number: '02',
     title: 'Персонажи для франшизы',
     text: 'Собираем внешний вид героя или антагониста так, чтобы он работал в трейлере, питче, ключевом арте и будущей игре.',
-    image: '/media/forge-character-direction.png',
+    image: media('forge-character-direction.png'),
     alt: 'Темный фэнтези персонаж с капюшоном и светящимся посохом в дождливом городе',
   },
   {
     number: '03',
     title: 'Миры и сцены',
     text: 'Помогаем найти визуальный язык локаций: от арены боя до атмосферного кадра, который объясняет правила мира без длинного текста.',
-    image: '/media/forge-world-scene.png',
+    image: media('forge-world-scene.png'),
     alt: 'Эпичная фэнтези арена из драконьих костей на горном утесе во время грозы',
   },
 ];
@@ -59,19 +61,19 @@ const showreelShots = [
     label: 'Появление',
     title: 'Появление босса',
     text: 'Короткий ролик для первого впечатления: кто перед нами, чем он опасен и почему его хочется запомнить.',
-    video: '/media/showreel-boss-first.mp4',
+    video: media('showreel-boss-first.mp4'),
   },
   {
     label: 'Бой',
     title: 'Боевая сцена',
     text: 'Фрагмент боевой сцены: арена, атака, реакция окружения и понятная игровая идея.',
-    video: '/media/showreel-second-fight.mp4',
+    video: media('showreel-second-fight.mp4'),
   },
   {
     label: 'Мир',
     title: 'Атмосфера мира',
     text: 'Кадр для питча или трейлера: место, настроение, масштаб и визуальные правила будущей игры.',
-    video: '/media/showreel-third-world.mp4',
+    video: media('showreel-third-world.mp4'),
   },
 ];
 
@@ -140,8 +142,8 @@ function App() {
       <section className="hero-section" aria-label="Lumen Anvil">
         <video
           className="hero-video"
-          src="/media/lumen-anvil-hero.mp4"
-          poster="/media/lumen-anvil-hero.jpg"
+          src={media('lumen-anvil-hero.mp4')}
+          poster={media('lumen-anvil-hero.jpg')}
           autoPlay
           muted
           loop
@@ -230,7 +232,7 @@ function App() {
           </div>
           <figure className="intro-media">
             <img
-              src="/media/lumen-anvil-concept-art.png"
+              src={media('lumen-anvil-concept-art.png')}
               alt="Темный стол игровой арт-студии с золотыми схемами босса и голографической ареной"
             />
           </figure>
