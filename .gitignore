@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+.env.*
+
+# Local production workspace notes and QA artifacts
+.superpowers/
+docs/
+qa/
+AGENTS.md
+
+# Local dev logs
+*.log
+vite-*.err.log
+vite-*.log
